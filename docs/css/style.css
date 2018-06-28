@@ -845,6 +845,7 @@ img {
       display: inline-block;
       vertical-align: top;
       width: 17px;
+      border: 1px solid transparent;
       color: #4f4f4f; }
       .pagination-lists__link:hover {
         border-radius: 3px;
