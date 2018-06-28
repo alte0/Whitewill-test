@@ -1,0 +1,68 @@
+.menu-catalog-lists {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &_pdl {
+    padding-left: 18px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
+  &__item {
+    margin-bottom: 2px;
+  }
+  &__link {
+    background-color: $bg-menu-catalog;
+    color: $text-menu-catalog;
+    font-size: 14px;
+    line-height: 29px;
+    display: inline-block;
+    width: 100%;
+    padding-left: 18px;
+    box-sizing: border-box;
+    transition: background-color 0.5s linear;
+    position: relative;
+    text-decoration:underline;
+    &::after { // fix ie 10-11
+      text-decoration:underline; 
+      display:inline-block;
+    }
+    &:hover {
+      background-color: $bg-menu-catalog-hover;
+      &::after {
+        content: '+';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 8px;
+        margin: auto;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    &_active {
+      background-color: $bg-menu-catalog-active;
+    }
+    &_bg-decor {
+      position: relative;
+      background-color: transparent;
+      font-size: 13px;
+      line-height: 24px;
+      &:hover::after {
+        content: '';
+      }      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 0;
+        height: 1px;
+        width: 13px;
+        background-color: $text-menu-catalog;
+      }
+    }
+  }
+}
+

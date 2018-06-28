@@ -1,0 +1,13 @@
+doctype html
+html(lang='ru')
+    include components/service/_head
+    body
+      .container
+        include components/common/_header
+
+        block page
+          include components/common/_content
+
+        include components/common/_footer
+        include components/common/_modal
+        include components/service/_js

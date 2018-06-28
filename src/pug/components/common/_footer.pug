@@ -1,0 +1,20 @@
+footer.footer
+  .footer__top
+    ul.menu-lists
+      each title in ['О компании', 'Каталог', 'Доставка', 'Наши магазины', 'Оптовикам', 'Контакты'  ]
+          li.menu-lists__item.menu-lists__item_footer
+              a.menu-lists__link.menu-lists__link_footer(href='#')= title
+  
+  .footer__bottom.row-footer
+    .row-footer__cell
+      .copyright © 2007-2011 Интернет-супермаркет 
+        a.text-gray74(href="/") «Elwau.ru»
+      address.address Адрес: 105118, г.Москва, ул. Кирпичная, д. 22
+      .tel 
+        a.text-gray74.text-decor-none(href="tel:+74955405511") Тел.: +7 (495) 540-55-11, 
+        a.text-gray74.text-decor-none(href="tel:+78005555590") 8 (800) 555-55-90
+      .mail
+        a.text-gray74.text-decor-none(href="mailto:info@elwau.ru") Email: info@elwau.ru
+    .row-footer__cell
+      p.author Дизайн сайта - 
+        a.text-gray74(href="#" target="_blank") Плюснин Никита

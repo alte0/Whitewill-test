@@ -1,0 +1,27 @@
+mixin productsItem(title, img, price)
+  li.products__item
+    .products__inner-wrap
+      img(src="images/" + img + '.png', alt="")
+      span.products__price #{price}
+        |  р
+    h3.products__title 
+      a.products__link(href="#") #{title}
+    
+
+//- end mixin
+ul.products
+  +productsItem('CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT', 'car', '18 480')
+  +productsItem('Кордовая модель-копия PT-19 Profile Control Line 36 ARF', 'aircraft', '5 712')
+  +productsItem('Электрический мини-вертолет HM 60#B', 'helicopter', '18 240')
+
+  +productsItem('CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT', 'car', '18 480')
+  +productsItem('Электрический мини-вертолет HM 60#B', 'helicopter', '18 240')
+  +productsItem('Кордовая модель-копия PT-19 Profile Control Line 36 ARF', 'aircraft', '5 712')
+
+  +productsItem('Электрический мини-вертолет HM 60#B', 'helicopter', '18 240')
+  +productsItem('Кордовая модель-копия PT-19 Profile Control Line 36 ARF', 'aircraft', '5 712')
+  +productsItem('CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT', 'car', '18 480')
+
+  +productsItem('CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT', 'car', '18 480')
+  +productsItem('Электрический мини-вертолет HM 60#B', 'helicopter', '18 240')
+  +productsItem('Кордовая модель-копия PT-19 Profile Control Line 36 ARF', 'aircraft', '5 712')

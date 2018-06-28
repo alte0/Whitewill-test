@@ -1,0 +1,11 @@
+.sticky {
+  z-index: 1;
+  box-sizing: border-box;
+  top: -100%;
+  transition: top 0.5s linear;
+  &__js-on {
+    position: fixed;
+    top: 0;
+    transition: top 0.5s linear;
+  }
+}

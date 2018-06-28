@@ -1,0 +1,16 @@
+.footer {
+  padding-top: 10px;
+  padding-bottom: 80px;
+  &__top, &__bottom {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &__top {
+    background-color: $bg-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &__bottom {
+    padding-top: 12px;
+  }
+}

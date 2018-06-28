@@ -1,0 +1,32 @@
+.modal#modal
+  .modal__content.container
+    button.modal__close-button(data-close='', aria-label='Close modal', type='button')
+      span(aria-hidden='true') ×
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae nulla quam repudiandae hic vel obcaecati laboriosam corrupti quos consectetur, consequatur dolorem necessitatibus nam corporis. Nostrum cum voluptas laboriosam dolores repellat!Eaque aspernatur asperiores, voluptatibus facere impedit earum temporibus esse fugiat rem magnam odit iure reiciendis tempora beatae repellat ut. Placeat tempora possimus officiis ratione in eos consequatur recusandae reiciendis corrupti.Harum laudantium nostrum rerum facilis neque porro magnam error officiis inventore incidunt, consequuntur consectetur temporibus nihil dolores omnis voluptas vitae quaerat voluptate veritatis enim culpa! Quis odio consectetur dolores cupiditate!Adipisci assumenda vitae temporibus, possimus veritatis debitis sed blanditiis rem a deserunt libero nostrum consequuntur quod ullam saepe aliquam reprehenderit, officiis fugit nam ut fuga at quos explicabo tenetur! Consectetur.Vitae, blanditiis magni nisi reprehenderit possimus ea nemo rerum deleniti, et saepe aspernatur aliquid placeat molestiae quam iusto provident rem cum voluptate quidem facilis veniam! Quia numquam fuga rerum earum.
+    .calculate#calculate
+      .calculate__text
+        p *Калькулятор расчета стоимости объекта в зависимости от введенной площади и модификатора со следующими условиями: 	
+        ul
+          li - площадь от 10 до 50 — 10000 руб./м2
+          li - площадь от 51 до 100 — 15000 руб./м2
+          li - площадь от 101 до 200 — 20000 руб./м2
+          li - модификатор 1 — конечная стоимость = площадь*стоимость 
+          li - модификатор 2 — конечная стоимость = площадь*стоимость*125%
+          li - модификатор 3 — конечная стоимость = площадь*стоимость*150%
+      .calculate__calculations
+        label
+          | Введите площадь от 10 до 200
+          br
+          input.calculate__num(type='number', min='10' max='200' value='10')
+        fieldset
+          legend модификаторы
+          input#modifier1(type='radio', name='modifier', value='0' checked)
+          label(for='modifier1') модификатор 1 
+          input#modifier2(type='radio', name='modifier', value='125')
+          label(for='modifier2') модификатор 2 
+          input#modifier3(type='radio', name='modifier', value='150')
+          label(for='modifier3') модификатор 3
+        button.calculate__btn Расчитать
+        br 
+        | Итого: 
+        span.calculate__total 

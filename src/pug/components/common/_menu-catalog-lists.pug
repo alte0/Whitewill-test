@@ -1,0 +1,18 @@
+// menu-catalog-lists
+ul.menu-catalog-lists
+  each title in ['Автомодели', 'Самолеты']
+    li.menu-catalog-lists__item
+      a.menu-catalog-lists__link(href='#')= title
+
+  li.menu-catalog-lists__item
+      a.menu-catalog-lists__link.menu-catalog-lists__link_active(href='#') Вертолеты
+      ul.menu-catalog-lists.menu-catalog-lists_pdl
+        each title in ['Для начинающих (Соосные)', 'С электродвигателем', 'Вертолеты с ДВС', 'Вертолеты Mikado']
+          li.menu-catalog-lists__item
+            a.menu-catalog-lists__link.menu-catalog-lists__link_bg-decor(href='#')= title
+  
+  each title in ['Аккумуляторы, кабели', 'Аппаратура', 'Инструмент, материалы', 'Винты, крепеж, клей', 'Двигатели ДВС', 'Электродвигатели', 'Катера, яхты'  ]
+      li.menu-catalog-lists__item
+        a.menu-catalog-lists__link(href='#')= title
+        
+// end menu-catalog-lists

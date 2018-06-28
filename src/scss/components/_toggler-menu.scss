@@ -1,0 +1,10 @@
+.toggler-menu {
+  text-align: right;
+  cursor: pointer;
+  @media screen and (min-width: 960px) {
+    display: none;
+  }
+  &-bar {
+    fill: #fff;
+  }
+}

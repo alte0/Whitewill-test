@@ -1,0 +1,42 @@
+.header {
+  margin-bottom: 7px;
+  &__top {
+  background-color: $bg-header-top;
+  padding: 11px 30px 14px 30px;
+  }
+  &__middle {
+    background-color: $bg-color2;
+    padding: 8px 30px 27px 30px;
+  }
+  &-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    &__cell {
+      width: 100%;
+      @media screen and (min-width: 640px) {
+        &:nth-child(1), &:nth-child(2) {
+          width: 50%;
+        }
+      }
+      &:not(:first-child) {
+        padding-top: 30px
+      }
+      @media screen and (min-width: 960px) {
+        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+          width: 33.33%;
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        &:nth-child(2) {
+          width: 43.88888888888889%;
+          padding-left: 44px;
+        }
+        &:nth-child(1), &:nth-child(3) {
+            width: 25.55555555555556%;
+        }
+      }
+    }
+  }
+}

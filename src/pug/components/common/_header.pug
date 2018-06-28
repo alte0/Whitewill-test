@@ -1,0 +1,40 @@
+header.header
+  .header__top.sticky
+    .toggler-menu
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="20px" width="20px" class="toggler-menu-bar">
+        <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+      </svg>
+    ul.menu-lists#menu
+      each title in ['О компании', 'Каталог', 'Доставка', 'Наши магазины', 'Оптовикам', 'Контакты'  ]
+          li.menu-lists__item
+              a.menu-lists__link(href='#')= title
+      li.menu-lists__item.menu-lists__item_search 
+          form.form-search(action="")
+            input.form-search__text(type="text" placeholder="Поиск по каталогу")
+            button.form-search__submit(type="submit")
+
+  .header__middle.header-box
+    .header-box__cell
+      a(href="/")
+        img.logo(src="images/logo.png", alt="elwau.ru")
+    .header-box__cell
+      ul.tel-lists
+        li.tel-lists__item
+          a.tel-lists__link(href="tel:84952342233") (495) 
+            span.text-orange 234-22-33
+        li.tel-lists__item ,
+        li.tel-lists__item
+          a.tel-lists__link(href="tel:84952322235") (495) 
+            span.text-orange 232-22-35
+      ul.message-lists
+        li.message-lists__item
+          a.message-lists__link.message-lists__link_mail(href="mailto:mail@mail.com") Написать сообщение 
+        li.message-lists__item
+          // icq-api тут
+          a.message-lists__link.message-lists__link_icq(href="icq-api:2882208") 288-22-08
+    .header-box__cell
+      ul.user-menu-lists
+        li.user-menu-lists__item
+          a.user-menu-lists__link.user-menu-lists__link_basket(href="") В вашей корзине пусто
+        li.user-menu-lists__item
+          a.user-menu-lists__link.user-menu-lists__link_cabinet(href="") Личный кабинет
