@@ -87,6 +87,8 @@
     };
     
     var clickMenuHandler = function (evt) {
+      evt.preventDefault();
+      
       var target = evt.target;
       while (target != MENU) {
         if (target.tagName === 'A') {
